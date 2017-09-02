@@ -56,6 +56,7 @@ body, html {
 <div class="w3-top w3-block w3-mobile">
   <div class="w3-bar w3-dark-gray w3-block w3-mobile w3-container w3-xxlarge" id="myNavbar">
       <h1 class="w3-bar w3-block w3-dark-gray">Pant Roulett</h1>
+          <button onclick="spin()" class=" w3-mobile w3-block w3-button w3-black" style="width: 100%">Spin</button>
         <div class="w3-dropdown-hover">
         <button class="w3-xlarge w3-button w3-block w3-dark-gray">Skole</button>
         <div class ="w3-dropdown-content w3-bar-block w3-xlarge">
@@ -69,6 +70,7 @@ body, html {
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
   </div>
+    <canvas id="wheelcanvas" width="1000" height="1000" class="w3-mobile w3-block"></canvas> 
     </div>
     
 <!-- First Parallax Image with Logo Text -->
@@ -77,8 +79,7 @@ body, html {
 
       <!-- from http://www.switchonthecode.com/tutorials/creating-a-roulette-wheel-using-html5-canvas -->
 <div class="demo-app"><div class="middle" style="width:600px;">
-<button onclick="spin()" class="w3-display-bottomleft w3-mobile w3-block w3-btn w3-black" style="width: 100%">Spin</button>
-<canvas id="wheelcanvas" width="1000" height="1000" class="w3-mobile w3-container"></canvas> 
+    
 <script type="application/javascript"> 
   var colors = ["#000000", "#323232", "#000000", "#323232",
                "#000000", "#323232", "#000000", "#323232",
