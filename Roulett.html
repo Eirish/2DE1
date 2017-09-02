@@ -85,7 +85,7 @@ body, html {
   var colors = ["#000000", "#000000", "#000000", "#000000",
                "#000000", "#000000", "#000000", "#000000",
                "#000000", "#000000", "#000000", "#000000"];
-  var restaraunts = [
+  var navn = [
         "Sivert",
         "Eirik",
         "Eivind",
@@ -100,7 +100,7 @@ body, html {
         "Sjur",];
   
   var startAngle = 0;
-  var arc = 2 * Math.PI / restaraunts.length ;
+  var arc = 2 * Math.PI / navn.length ;
   var spinTimeout = null;
   
   var spinArcStart = 10;
@@ -128,7 +128,7 @@ body, html {
       
       ctx.font = 'bold 16px sans-serif';
       
-      for(var i = 0; i < restaraunts.length; i++) {
+      for(var i = 0; i < navn.length; i++) {
         var angle = startAngle + i * arc;
         ctx.fillStyle = colors[i];
         
@@ -146,7 +146,7 @@ body, html {
         ctx.fillStyle = "white";
         ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 250 + Math.sin(angle + arc / 2) * textRadius);
         ctx.rotate(angle + arc / 2 + Math.PI / 2);
-        var text = restaraunts[i];
+        var text = navn[i];
         ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
         ctx.restore();
       } 
@@ -195,7 +195,7 @@ body, html {
     var index = Math.floor((360 - degrees % 360) / arcd);
     ctx.save();
     ctx.font = 'bold 190px sans-serif';
-    var text = restaraunts[index]
+    var text = navn[index]
     ctx.fillText(text, 520 - ctx.measureText(text).width / 2, 750 + 10);
     ctx.restore();
   }
