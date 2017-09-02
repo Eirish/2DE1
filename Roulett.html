@@ -44,7 +44,7 @@ body, html {
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 800px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
     }
@@ -54,17 +54,18 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top w3-block w3-mobile">
-  <div class="w3-bar w3-dark-gray w3-block w3-mobile" id="myNavbar">
+  <div class="w3-bar w3-dark-gray w3-block w3-mobile w3-container w3-xxlarge" id="myNavbar">
+      <h1 class="w3-bar w3-block w3-dark-gray">Pant Roulett</h1>
         <div class="w3-dropdown-hover">
-        <button class="w3-xlarge w3-button w3-dark-gray">Skole</button>
+        <button class="w3-xlarge w3-button w3-block w3-dark-gray">Skole</button>
         <div class ="w3-dropdown-content w3-bar-block w3-xlarge">
     <a href="https://fronter.com/mrvgs/" class="w3-xlarge w3-bar-item w3-buttonS" target="_blank">Fronter</a>
         <a href="UkePlan.html" class="w3-xlarge w3-bar-item w3-button">Uke Plan</a>
         </div>
       </div>
     <a href="index.html" class="w3-xlarge w3-bar-item w3-button">Hjem</a>
-    </div>
 
+    </div>
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
   </div>
@@ -73,10 +74,10 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="w3-mobile bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-mobile w3-display-middle" style="white-space:nowrap;">
-          <h1 class="w3-left w3-container w3-xxlarge w3-black w3-mobile w3-block w3-display" style="width: 45%">Pante Roulett</h1>
+
       <!-- from http://www.switchonthecode.com/tutorials/creating-a-roulette-wheel-using-html5-canvas -->
 <div class="demo-app"><div class="middle" style="width:600px;">
-<button onclick="spin()" class="w3-bottomleft w3-mobile w3-block w3-btn w3-black" style="width: 65%">Spin</button>
+<button onclick="spin()" class="w3-display-bottomleft w3-mobile w3-block w3-btn w3-black" style="width: 100%">Spin</button>
 <canvas id="wheelcanvas" width="1000" height="1000" class="w3-mobile w3-container"></canvas> 
 <script type="application/javascript"> 
   var colors = ["#000000", "#323232", "#000000", "#323232",
