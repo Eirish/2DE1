@@ -2,6 +2,7 @@
 <html>
 <head>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-9132437033412123",
@@ -11,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <title>2DE1</title>
+<meta name="google-signin-client_id" content="62869769844-brd8rp529qvc2s13ma846k34pvtsvn5u.apps.googleusercontent.com	">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -54,10 +56,20 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+    <div class="g-signin2 w3-container w3-right w3-mobile" data-onsuccess="onSignIn"></div>
   <button class="w3-bar-item w3-button w3-xxlarge"
   onclick="w3_close()">Lukk &times;</button>
   <a href="index.html" class="w3-xxlarge w3-bar-item w3-button">Hjem</a>
   <a href="https://fronter.com/mrvgs/" class="w3-xxlarge w3-bar-item w3-button">Fronter</a>
+        <a href="#" class="w3-button w3-xxlarge" onclick="signOut();">Logg ut av Google</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
     <div class="w3-dropdown-hover">
         <button class="w3-xxlarge w3-button">Artige greier</button>
         <div class ="w3-dropdown-content w3-bar-block w3-xlarge">
@@ -66,6 +78,7 @@ body, html {
         <a href="Magic8Ball.html" class="w3-xxlarge w3-bar-item w3-button">Magisk 8 Ball</a>  
         </div>
       </div>
+    
 </div>
 
 <div zclass="w3-main" id="main">

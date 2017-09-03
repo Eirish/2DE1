@@ -2,6 +2,7 @@
 <html>
 <head>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-9132437033412123",
@@ -11,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <title>2DE1</title>
+<meta name="google-signin-client_id" content="62869769844-brd8rp529qvc2s13ma846k34pvtsvn5u.apps.googleusercontent.com	">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -62,6 +64,7 @@ input {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-dark-gray" id="myNavbar">
+       <div class="g-signin2 w3-container w3-right" data-onsuccess="onSignIn"></div>
         <div class="w3-dropdown-hover">
         <button class="w3-xlarge w3-button w3-dark-gray">Skole</button>
         <div class ="w3-dropdown-content w3-bar-block w3-xlarge">
@@ -71,6 +74,15 @@ input {
       </div>
     <a href="index.html" class="w3-xlarge w3-bar-item w3-button">Hjem</a>
     <a href="https://stackoverflow.com/questions/32471774/magic-8-ball-in-javascript" class="w3-xlarge w3-bar-item w3-button" target="_blank">Sources</a>
+          <a href="#" class="w3-xlarge w3-bar-item w3-button" onclick="signOut();">Logg ut av Google</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
     </div>
 
   <!-- Navbar on small screens -->
