@@ -2,6 +2,7 @@
 <html>
 <head>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-9132437033412123",
@@ -33,22 +34,7 @@ body, html {
     background-size: cover;
 }
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url("bilder/pant.gif");
-    min-height: 100%;
-}
 
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1000px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
 </style>
 <body>
 
@@ -153,7 +139,7 @@ body, html {
       } 
       
       //Arrow
-      ctx.fillStyle = "white";
+      ctx.fillStyle = "black";
       ctx.beginPath();
       ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
       ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
