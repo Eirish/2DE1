@@ -88,19 +88,24 @@ body, html {
   'Sivert', 'Eirik', 'Eivind', 'Øyvind',
   'Andreas', 'Olav', 'Ole Marius', 'Markus',
   'Magne', 'Jeremi', 'Adrian', 'Sjur'];
+    var ans1;
+    var ans2;
 
 document.getElementById('answerButton').onclick = function () {
 var answer = answers[Math.floor(Math.random() * answers.length)];
     document.getElementById('answerContainer').innerHTML = answer;
     
-
-
-    
     
     
     var lnswer = answers[Math.floor(Math.random() * answers.length)];
     
-    document.getElementById('answerContainer2').innerHTML = lnswer;
+   if(lnswer == answer){
+       var lnswer = answers[Math.floor(Math.random() * answers.length)];
+       
+   } 
+    else{ document.getElementById('answerContainer2').innerHTML = lnswer;
+        
+        }
 };  
 
 
