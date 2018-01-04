@@ -1074,27 +1074,6 @@ header {
     color: #f44242;
 }
 
-.team .team-social {
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-}
-
-.team .team-social a {
-    display: block;
-    line-height: 50px;
-    width: 50px;
-    text-align: center;
-    background-color: #f44242;
-    color: #FFF;
-}
-
-.team:hover .team-social {
-    opacity: 1;
-}
 
 
 /*------------------------------------*\
@@ -1517,6 +1496,11 @@ header {
       text-align: center;
       display: block;
   }
+
+  .home-content h3 {
+    font-size:36px;
+    color: #f44242;
+}
 
   .header-wrapper .breadcrumb {
       float: none;
