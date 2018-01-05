@@ -9,7 +9,7 @@ var config = {
 firebase.initializeApp(config);
 var firestore = firebase.firestore();
 
-const docRef = firestore.doc("Data/1");
+const docRef = firestore.doc("2DE1/Samfunnsfag");
 const outputHeader = document.querySelector("#Output");
 const inputTextField = document.querySelector("#status");
 const saveButton = document.querySelector("#SaveButton");

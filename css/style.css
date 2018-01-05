@@ -1795,7 +1795,10 @@ header {
     transform: translateX(0);
     visibility: visible;
   }
-
+  fompa{
+    max-width:auto;
+    word-wrap:break-word;
+}
 
 
   
