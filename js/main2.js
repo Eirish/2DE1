@@ -379,3 +379,4 @@ jQuery(document).ready(function($){
 		});
 	}
 });
+

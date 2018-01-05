@@ -8,6 +8,8 @@
 
 	<title>2DE1</title>
 
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
 
@@ -25,9 +27,32 @@
 
 
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCLsYnNTsRxlyVZYlV5RvMagWslqOPJ-A4",
+    authDomain: "de1database-e9ea2.firebaseapp.com",
+    databaseURL: "https://de1database-e9ea2.firebaseio.com",
+    projectId: "de1database-e9ea2",
+    storageBucket: "de1database-e9ea2.appspot.com",
+    messagingSenderId: "5729486823"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </head>
 
+
+
+
+
 <body>
+
+	
 
 	<header id="home">
 
@@ -61,11 +86,26 @@
 					<li><a href="#home">Hjem</a></li>
 					<li><a href="#team">Elever</a></li>
 					<li><a href="kalender.html">Timeplan</a></li>
-					<!-- Oh shit is dis a forum teaser??? <li class="has-dropdown"><a href="#forum">Forum</a>
+					
+					<li class="has-dropdown"> <a>Login</a>
 						<ul class="dropdown">
-							<li><a href="#">Forum</a></li>
+								<li>
+										<div id="login_div" class="main-nav">
+												<a>2DE1 Login</a>
+												<input type="email" placeholder="Email..." id="email_field" />
+												<input type="password" placeholder="Password..." id="password_field" />
+											
+												<a onclick="login()">Logg in</a>
+											  </div>
+											
+											  <div id="user_div" class="loggedin-div">
+												<a>Logget inn som</a>
+												<a id="user_para"></a>
+												<a onclick="logout()">Logout</a>
+											  </div>
+									</div></li>
 						</ul>
-					</li> -->
+					</li> 
 				</ul>
 
 
@@ -378,6 +418,10 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/index.js"></script>
+	
+		  
+
 
 </body>
 
