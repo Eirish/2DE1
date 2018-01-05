@@ -32,7 +32,7 @@ getRealtimeUpdates = function() {
     if (doc && doc.exists) {
       const myData = doc.data();
       console.log("Fikk:", doc);
-      outputHeader.innerText = "Status: " + myData.statusx;
+      outputHeader.innerText = "Info om fag: " + myData.statusx;
     }
   });
 }
