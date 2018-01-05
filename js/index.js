@@ -126,3 +126,9 @@ function initApp() {
 window.onload = function() {
   initApp();
 };
+
+const preObject = document.getElementById('object');
+
+  const dbRefObject = firebase.database().ref().child('object');
+  dbRefObject.on('value', snap => console.log(snap.val()));
+
