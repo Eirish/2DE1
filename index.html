@@ -87,22 +87,33 @@
 					<li><a href="#team">Elever</a></li>
 					<li><a href="kalender.html">Timeplan</a></li>
 					
-					<li class="has-dropdown"> <a>Login</a>
+					<li class="has-dropdown"> <a>Bruker</a>
 						<ul class="dropdown">
 								<li>
-										<div id="login_div" class="main-nav">
-												<a>2DE1 Login</a>
-												<input type="email" placeholder="Email..." id="email_field" />
-												<input type="password" placeholder="Password..." id="password_field" />
-											
-												<a onclick="login()">Logg in</a>
-											  </div>
-											
-											  <div id="user_div" class="loggedin-div">
+								<div id="user_div" class="main-nav">
 												<a>Logget inn som</a>
 												<a id="user_para"></a>
-												<a onclick="logout()">Logout</a>
+												<a onclick="logout()">Logg ut</a>
 											  </div>
+									
+									
+									
+									
+									
+								<div id="login_div" class="main-nav">
+												<a>2DE1 Login</a>
+												<input type="email" placeholder="Email..." id="email" />
+												<input type="password" placeholder="Password..." id="password" />
+											
+												<a id="quickstart-sign-in">Logg in</a>
+												<a id="quickstart-sign-up">Registrer bruker</a>
+											  <a disable id="quickstart-verify-email">Verifiser Email</a>
+											  <a id="quickstart-verify-email">Reset Passord</a>
+											  </div>
+											
+											  
+
+											  
 									</div></li>
 						</ul>
 					</li> 
