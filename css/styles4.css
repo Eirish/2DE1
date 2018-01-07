@@ -270,6 +270,16 @@ footer {
   font-size: 72px;
   text-align: center;
 }
+#home-title a {
+  margin: 45px auto -15px auto;
+  font-size: 72px;
+  text-align: center;
+}
+#home-title p h3 {
+  margin: 45px auto -15px auto;
+  font-size: 30px;
+  text-align: center;
+}
 
 #home-subtitle {
   font-size: 36px;

@@ -41,7 +41,43 @@
     // The start method will wait until the DOM is loaded.
     ui.start('#firebaseui-auth-container', uiConfig);
   </script>
-
+  <script type="text/javascript">
+    initApp = function() {
+      firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        var photoURL = user.photoURL;
+        var uid = user.uid;
+        var phoneNumber = user.phoneNumber;
+        var providerData = user.providerData;
+        user.getIdToken().then(function(accessToken) {
+        document.getElementById('account-details').textContent = 'Du er allerede logget inn som ' + (displayName);
+        document.getElementById("hide").style.display = "none";
+        document.getElementById('login').style.display = "block";
+        
+        });
+      } else {
+        // User is signed out.
+        document.getElementById('sign-in-status').textContent = 'Du er ikke logget inn';
+        document.getElementById('account-details').textContent = '';
+        document.getElementById("hide").style.display = "block";
+        document.getElementById('login').style.display = "none";
+      }
+      }, function(error) {
+      console.log(error);
+      });
+    };
+  
+    window.addEventListener('load', function() {
+      initApp()
+    });
+    function logout(){
+    firebase.auth().signOut();
+  }
+    </script>
 
 
 
@@ -49,7 +85,22 @@
  </div>
  <body>
     <div id="home-title"><span class="strong">2DE1 </span>
-    <p><span class="satisfy">Logg inn for å få tilgang</span></div></p>
-     <div id="firebaseui-auth-container"></div>
+    <p><span class="satisfy" id="hide">Logg inn for å få tilgang</span></div></p>
+
+
+    <div id="firebaseui-auth-container"></div>
+
+
+     
+    <div id="home-title">
+        <h3 class="strong"><div id="sign-in-status"></div></h3>
+        
+        <h3 class="strong" id="login"><div id="account-details"></div></h3>
+             <a href="home.html" class="satisfy">Gå til hovedsiden</a>
+             
+            </div>
+    
  </body>
+ 
+
 </html>

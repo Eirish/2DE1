@@ -66,7 +66,7 @@
 		  });
 		} else {
 		  // User is signed out.
-		  document.getElementById('sign-in-status').textContent = 'Logget ut';
+		  document.getElementById('sign-in-status').textContent = 'Ikke logget inn';
 		  document.getElementById('account-details').textContent = '';
 		  document.getElementById("hide").style.display = "none";
 		}
@@ -134,10 +134,10 @@
 					<li class="has-dropdown"> <a>Bruker</a>
 						<ul class="dropdown">
 								<li>
-								<div id="user_div" class="main-nav">
-									<li><a><div id="account-details"></div></a></li>
+								<div class="main-nav">
+									<li ><a><div id="account-details"></div></a></li>
 									<li><a><div id="sign-in-status"></div></a></li>
-									<li><a href="index.html" onclick="logout()">Logg ut</a></li>
+									<li><a href="index.html" onclick="logout()">Logg ut/inn</a></li>
 
 						
 						</ul>
