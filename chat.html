@@ -1,0 +1,197 @@
+<!Doctype html>
+<html>
+
+<head id="hide">
+  <meta charset="utf-8" />
+  <title>2DE1 Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Firebase Firechat Documentation">
+  <meta name="author" content="Rob DiMarco, Engineer @ Firebase, rob@firebase.com">
+  <meta name="description" content="Open source, real-time chat built on Firebase." />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" />
+
+  <!-- Firechat -->
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.css" />
+
+  <link rel="stylesheet" href="css/pygments-borland.css" />
+
+
+  <link href="/images/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <link rel="stylesheet" href="css/style5.css" />
+</head>
+
+
+
+
+
+<body class="home-page">
+
+
+  <header id="top-content">
+      <nav id="nav" class="navbar nav-transparent">
+          <div class="container">
+    
+            <div class="navbar-header">
+    
+    
+    
+    
+              <div class="nav-collapse">
+                <span></span>
+              </div>
+    
+            </div>
+    
+    
+            <ul class="main-nav nav navbar-nav navbar-right" >
+              <li><a href="home.html#home">Hjem</a></li>
+              <li><a href="home.html#team">Elever</a></li>
+              <li><a href="kalender.html">Timeplan</a></li>
+              <li><a><div id="account-details"></div></a></li>
+              <li><a href="index.html" onclick="logout()">Logg ut</a></li>
+              <li><a><div id="sign-in-status"></div></a></li>
+              
+              
+              
+
+    
+                
+                </ul>
+              </li> 
+            </ul>
+    
+    
+          </div>
+        </nav>
+
+    <div class="header-content">
+      <div class="container text-center">
+        <div class="row">
+          <div>
+            
+            <div id="firechat-container"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  
+
+  
+
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+  <!-- Firechat -->
+  <script src="js/firechat.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-modal.min.js"></script>
+
+  <script>
+    // Initialize Firebase SDK
+    var config = {
+      apiKey: "AIzaSyCLsYnNTsRxlyVZYlV5RvMagWslqOPJ-A4",
+      authDomain: "de1database-e9ea2.firebaseapp.com",
+      databaseURL: "https://de1database-e9ea2.firebaseio.com",
+      projectId: "de1database-e9ea2",
+      storageBucket: "de1database-e9ea2.appspot.com",
+      messagingSenderId: "5729486823"
+    };
+    firebase.initializeApp(config);
+
+    // Get a reference to the Firebase Realtime Database
+    var chatRef = firebase.database().ref(),
+        target = document.getElementById("firechat-container"),
+        authModal = $('#auth-modal').modal({ show: false }),
+        chat = new FirechatUI(chatRef, target);
+
+    chat.on('auth-required', function() {
+      authModal.modal('show');
+      return false;
+    });
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        var userId = user.uid,
+            username = user.displayName;
+
+        chat.setUser(userId, username);
+        $('#user-name').text(username);
+        $('#user-info').show();
+        setTimeout(function() {
+          chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+        }, 500);
+      } else {
+        $('#user-info').hide();
+        chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+      }
+    });
+
+  </script>
+<script type="text/javascript">
+	initApp = function() {
+	  firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+		  // User is signed in.
+		  var displayName = user.displayName;
+		  var email = user.email;
+		  var emailVerified = user.emailVerified;
+		  var photoURL = user.photoURL;
+		  var uid = user.uid;
+		  var phoneNumber = user.phoneNumber;
+		  var providerData = user.providerData;
+		  user.getIdToken().then(function(accessToken) {
+			document.getElementById('account-details').textContent = 'Velkommen ' + (displayName);
+			document.getElementById("hide").style.display = "block";
+		  });
+		} else {
+		  // User is signed out.
+		  document.getElementById('sign-in-status').textContent = 'Logget ut';
+		  document.getElementById('account-details').textContent = '';
+		  document.getElementById("hide").style.display = "none";
+		}
+	  }, function(error) {
+		console.log(error);
+	  });
+	};
+
+	window.addEventListener('load', function() {
+	  initApp()
+	});
+	function logout(){
+  firebase.auth().signOut();
+}
+  </script>
+  </script>
+  
+    <div id="back-to-top"></div>
+  
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,451 +1,55 @@
 <!DOCTYPE html>
-<html lang="no">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>2DE1</title>
-
-	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-
-
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
-
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-
-	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
-
-
-	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
-
-
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css" />
-	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  
-
-</head>
-
-
-
-
-
-<body>
-
-
-
-	
-
-	<header id="home">
-
-		<div class="bg-img" style="background-image: url('./img/background1.jpg');">
-			<div class="overlay"></div>
-		</div>
-
-
-
-		<nav id="nav" class="navbar nav-transparent">
-			<div class="container">
-
-				<div class="navbar-header">
-
-					<div class="navbar-brand">
-						<a href="index.html">
-							<img class="logo" src="img/logo.png" alt="logo">
-						</a>
-					</div>
-
-
-
-					<div class="nav-collapse">
-						<span></span>
-					</div>
-
-				</div>
-
-
-				<ul class="main-nav nav navbar-nav navbar-right">
-					<li><a id="hide" href="IgorSoundboard.html">Secret</a></li>
-					<li><a href="#home">Hjem</a></li>
-					<li><a href="#team">Elever</a></li>
-					<li><a href="kalender.html">Timeplan</a></li>
-					
-					
-					<li class="has-dropdown"> <a>Bruker</a>
-						<ul class="dropdown">
-								<li>
-								<div id="user_div" class="main-nav">
-												<a>Logget inn som</a>
-												<a id="user_para"></a>
-												<a onclick="logout()">Logg ut</a>
-											  </div>
-									
-									
-									
-									
-									
-								<div id="login_div" class="main-nav">
-												<a>2DE1 Login</a>
-												<input type="email" placeholder="Email..." id="email" />
-												<input type="password" placeholder="Password..." id="password" />
-											
-												<a onclick="login()">Logg in</a>
-												<a id="quickstart-sign-up">Registrer bruker</a>
-											  <a disable id="quickstart-verify-email">Verifiser Email</a>
-											  <a id="quickstart-verify-email">Reset Passord</a>
-											  </div>
-											
-											  
-
-											  
-									</div></li>
-
-						
-						</ul>
-					</li> 
-
-						
-						</ul>
-					</li> 
-				</ul>
-
-
-			</div>
-		</nav>
-
-		<div class="home-wrapper">
-			<div class="container">
-				<div class="row">
-
-
-					<div class="col-md-10 col-md-offset-1">
-						<div class="home-content">
-							<h1 class="white-text">Data og Elektronikk</h1>
-							<p class="white-text">Romsdal Vidregående 17/18
-							</p>
-							
-						</div>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-
-
-	</header>
-
-	
-
-
-	
-	
-
-
-	<div id="team" class="section md-padding">
-
-		
-		<div class="container">
-
-			
-			<div class="row">
-
-				
-				<div class="section-header text-center">
-					<h2 class="title">Elever</h2>
-				</div>
-
-				<!-- Sivert -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Siv.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Sivert </h3>
-							<h3>Bjerkestrand</h3>
-							<span>25 Aug 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Sivert -->
-
-				<!-- Eirik -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Eir.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Eirik </h3>
-							<h3>Bjørdal</h3>
-							<span>27 Feb 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Eirik -->
-
-				<!-- Eivind -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Eiv.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Eivind</h3>
-							<h3>Fiske</h3>
-							<span>3 Mai 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Eivind -->
-
-				<!-- Øyvind -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Øyv.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Øyvind </h3>
-							<h3>Flemmen</h3>
-							<span>3 Feb 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Øyvind -->
-
-				<!-- Andreas -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/And.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Andreas </h3>
-							<h3>Gjul</h3>
-							<span>3 Jan 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Andreas -->
-
-				<!-- Olav -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Olav.png" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Olav </h3>
-							<h3>Huse</h3>
-							<span>5 Jan 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Olav -->
-
-				<!-- Ole Marius -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Ole.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Ole Marius </h3>
-							<h3>Inderhaug</h3>
-							<span>13 Des 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Ole Marius -->
-
-				<!-- Markus -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Mar.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Markus </h3>
-							<h3>Lyngvær</h3>
-							<span>26 Sep 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Markus -->
-
-				<!-- Magne -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Mag.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Magne </h3>
-							<h3>Morstøl</h3>
-							<span>17 Mai 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Magne -->
-
-				<!-- Jeremi -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Jer.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Jeremi </h3>
-							<h3>Nakielski</h3>
-							<span>5 Okt 2000</span>
-							
-						</div>
-					</div>
-				</div>
-				<!-- /Jeremi -->
-
-				<!-- Adrian -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Adr.jpg" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Adrian </h3>
-							<h3>Riksfjord</h3>
-							<span>26 Jan 2000</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Adrian -->
-
-				<!-- Sjur -->
-				<div class="col-sm-4">
-					<div class="team">
-						<div class="team-img">
-							<img class="img-responsive" src="./img/Sju.gif" alt="">
-							<div class="overlay">
-							</div>
-						</div>
-						<div class="team-content">
-							<h3>Sjur</h3>
-							<h3>ledguy</h3>
-							<span>ERROR://</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Sjur -->
-
-			</div>
-
-
-		</div>
-
-
-	</div>
-
-
-	
-
-
-
-	<footer id="footer" class="sm-padding bg-dark">
-
-		
-		<div class="container">
-
-			
-			<div class="row">
-
-				<div class="col-md-12">
-
-					<div class="footer-logo">
-						<a href="index.html"><img src="img/logo.png" alt="logo"></a>
-					</div>
-
-					<div class="footer-copyright">
-						<p><a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-					</div>
-					
-
-
-
-				</div>
-
-			</div>
-
-
-		</div>
-
-
-	</footer>
-
-	<div id="back-to-top"></div>
-
-	<div id="preloader">
-		<div class="preloader">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	</div>
-
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script src="js/index.js"></script>
-	<script>
-			// Initialize Firebase
-			var config = {
-			  apiKey: "AIzaSyCLsYnNTsRxlyVZYlV5RvMagWslqOPJ-A4",
-			  authDomain: "de1database-e9ea2.firebaseapp.com",
-			  databaseURL: "https://de1database-e9ea2.firebaseio.com",
-			  projectId: "de1database-e9ea2",
-			  storageBucket: "de1database-e9ea2.appspot.com",
-			  messagingSenderId: "5729486823"
-			};
-			firebase.initializeApp(config);
-		  </script>
-	
-		  
-
-
-</body>
-
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>2DE1 Login Page</title>
+ </head>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/styles4.css" />
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCLsYnNTsRxlyVZYlV5RvMagWslqOPJ-A4",
+    authDomain: "de1database-e9ea2.firebaseapp.com",
+    databaseURL: "https://de1database-e9ea2.firebaseio.com",
+    projectId: "de1database-e9ea2",
+    storageBucket: "de1database-e9ea2.appspot.com",
+    messagingSenderId: "5729486823"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+<script type="text/javascript">
+    // FirebaseUI config.
+    var uiConfig = {
+      signInSuccessUrl: 'home.html#home',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+      ],
+    };
+
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+
+
+
+
+ <div>
+ </div>
+ <body>
+    <div id="home-title"><span class="strong">2DE1 </span>
+    <p><span class="satisfy">Logg inn for å få tilgang</span></div></p>
+     <div id="firebaseui-auth-container"></div>
+ </body>
 </html>
