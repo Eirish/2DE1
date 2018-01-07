@@ -152,7 +152,7 @@
 		  var photoURL = user.photoURL;
 		  var uid = user.uid;
 		  var phoneNumber = user.phoneNumber;
-		  var providerData = user.providerData;
+      var providerData = user.providerData;
 		  user.getIdToken().then(function(accessToken) {
 			document.getElementById('account-details').textContent = 'Velkommen ' + (displayName);
 			document.getElementById("hide").style.display = "block";
@@ -160,7 +160,7 @@
 		} else {
 		  // User is signed out.
 		  document.getElementById('sign-in-status').textContent = 'Logget ut';
-		  document.getElementById('account-details').textContent = '';
+		  document.getElementById('account-details').textContent = "block";
 		  document.getElementById("hide").style.display = "none";
 		}
 	  }, function(error) {
